@@ -17,8 +17,10 @@
         {% block monheader %}
             <header>
                 <nav>
-                    <a href="#">accueil</a>
-                    <a href="#">contact</a>
+                    <a href="{{ path('first') }}">first</a>
+                    <a href="{{ path('accueil') }}">accueil</a>
+                    <a href="{{ path('galerie') }}">galerie</a>
+                    <a href="{{ path('contact') }}">contact</a>
                 </nav>
             </header>
         {% endblock %}

@@ -32,8 +32,10 @@ DANS LE TEMPLATE ENFANT, ON NE FAIT QUE REMPLIR LES CASES PROPOSEES PAR LE TEMPL
 
 {% block monheader %}
     <header>
-        <nav>
-            <a href="#">bienvenue</a>
-        </nav>
+            <nav>
+                <a href="{{ path('accueil') }}">accueil</a>
+                <a href="{{ path('galerie') }}">galerie</a>
+                <a href="{{ path('contact') }}">contact</a>
+            </nav>
     </header>
 {% endblock %}
