@@ -32,4 +32,12 @@ class FirstController extends AbstractController
         ]);
     }
 
+    #[Route('/galerie', name: 'galerie')]
+    public function galerie(): Response
+    {
+        return $this->render('first/galerie.html.twig', [
+            'controller_name' => 'FirstController',
+        ]);
+    }
+
 }
