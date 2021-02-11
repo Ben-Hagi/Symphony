@@ -7,21 +7,31 @@
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="{{ path('first') }}">first</a>
-            <a href="{{ path('accueil') }}">accueil</a>
-            <a href="{{ path('galerie') }}">galerie</a>
-            <a href="{{ path('contact') }}">contact</a>
-        </nav>
-    </header>
+    {% block monheader %}
+        <header>
+            <nav>
+                <a href="{{ path('first') }}">first</a>
+                <a href="{{ path('galerie') }}">galerie</a>
+                <a href="{{ path('contact') }}">contact</a>
+            </nav>
+        </header>
+    {% endblock %}
     <main>
         <section>
             {% block titre1 %}
             <h1>MON TITRE1</h1>
             {% endblock %}
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, numquam in, mollitia culpa quia nostrum eius amet modi ipsam minus inventore assumenda eum ipsum voluptates, totam quibusdam similique consequatur expedita?</p>
+
+            {% block body %}
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Nisi, numquam in, mollitia culpa quia nostrum eius amet modi
+            ipsam minus inventore assumenda eum ipsum voluptates, totam 
+            quibusdam similique consequatur expedita?</p>
+            {% endblock %}
+
+            {% block Images %}
             <img src="images/photo1.jpg" alt="photo1">
+            {% endblock %}
         </section>
     </main>
     <footer>

@@ -1,4 +1,29 @@
 {% extends 'parent.html.twig' %}
+
+{% block monheader %}
+        <header>
+            <nav>
+                <a href="{{ path('first') }}">first</a>
+                <a href="{{ path('accueil') }}">accueil</a>
+                <a href="{{ path('contact') }}">contact</a>
+            </nav>
+        </header>
+    {% endblock %}
+
+
+
 {% block titre1 %}
-            <h1>Galerie</h1>
-            {% endblock %}
+<h1>Galerie</h1>
+{% endblock %}
+
+{% block Images %}
+<article>
+        <section>
+        <img src="images/photo1.jpg" alt="photo1">
+        </section>
+        <img src="images/photo2.jpg" alt="photo2">
+        </section>
+        <img src="images/photo3.jpg" alt="photo3">
+        </section>
+</article>
+{% endblock %}
