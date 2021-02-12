@@ -5,33 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mon Projet Symfony</title>
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/style-dev1.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/style-dev2.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/style-dev3.css') }}">
+
+    {% block carte1 %}
+    {% endblock %}
+
 </head>
 <body>
-    {% block monheader %}
-        <header>
-            <nav>
-                <a href="{{ path('first') }}">first</a>
-                <a href="{{ path('galerie') }}">galerie</a>
-                <a href="{{ path('contact') }}">contact</a>
-            </nav>
-        </header>
-    {% endblock %}
+    <header>
+        <nav>
+            <a href="{{ path('index') }}">accueil</a>
+            <a href="{{ path('galerie') }}">galerie</a>
+            <a href="{{ path('contact') }}">contact</a>
+        </nav>
+    </header>
     <main>
         <section>
             {% block titre1 %}
-            <h1>MON TITRE1</h1>
+            <h1>MON TITRE1 DEV1</h1>
+            {% endblock %}
+            {% block titre2 %}
+            <h1>LA MODIF QUE LE DEV2 AJOUTE et le dev2 continue à travailler sur son code</h1>
             {% endblock %}
 
-            {% block body %}
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Nisi, numquam in, mollitia culpa quia nostrum eius amet modi
-            ipsam minus inventore assumenda eum ipsum voluptates, totam 
-            quibusdam similique consequatur expedita?</p>
+            {% block carte2 %}
             {% endblock %}
 
-            {% block Images %}
-            <img src="images/photo1.jpg" alt="photo1">
-            {% endblock %}
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, numquam in, mollitia culpa quia nostrum eius amet modi ipsam minus inventore assumenda eum ipsum voluptates, totam quibusdam similique consequatur expedita?</p>
+            <img src="{{ asset('images/photo1.jpg') }}" alt="photo1">
         </section>
     </main>
     <footer>
